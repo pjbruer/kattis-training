@@ -1,1 +1,1 @@
-# kattis-training
+## kattis-training
