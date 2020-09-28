@@ -1,6 +1,6 @@
 ### kattis-training
 
-## Problem A
+# Problem A
 There is a game in which you try not to repeat a word while your opponent tries to see if you have repeated one.
 
 "THE RAIN IN SPAIN" has no repeats.
