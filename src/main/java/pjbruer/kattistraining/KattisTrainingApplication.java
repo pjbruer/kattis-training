@@ -17,5 +17,18 @@ public class KattisTrainingApplication {
 
 		Scanner sc = new Scanner(System.in);
 		//final String sentence = sc.nextLine();
+
+		containDuplicateWords(text.toLowerCase());
+		containDuplicateWords(text2.toLowerCase());
+		containDuplicateWords(text3.toLowerCase());
+	}
+	public static void containDuplicateWords(final String sentence){
+		System.out.println(sentence);
+		List<String> initialWords = Arrays.asList(sentence.split(" "));
+		Set<String> reducedWords = new HashSet<>(initialWords);
+		System.out.println("LIST SIZE " + initialWords.size());
+		System.out.println("SET SIZE " + reducedWords.size());
+		System.out.println("- Result -");
+		System.out.println(initialWords.size() > reducedWords.size());
 	}
 }
