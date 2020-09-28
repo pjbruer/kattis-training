@@ -11,24 +11,20 @@ public class KattisTrainingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(KattisTrainingApplication.class, args);
 
-		final String text = "THE RAIN IN SPAIN";
-		final String text2 = "IN THE RAIN AND THE SNOW";
-		final String text3 = "THE RAIN IN SPAIN IN THE PLAIN";
-
 		Scanner sc = new Scanner(System.in);
-		//final String sentence = sc.nextLine();
+		final String sentence = sc.nextLine().toLowerCase();
 
-		containDuplicateWords(text.toLowerCase());
-		containDuplicateWords(text2.toLowerCase());
-		containDuplicateWords(text3.toLowerCase());
+		String result = containsDuplicateWords(sentence);
+		System.out.println(result);
 	}
-	public static void containDuplicateWords(final String sentence){
-		System.out.println(sentence);
+	public static String containsDuplicateWords(final String sentence){
+		//Splitting string into list of words
 		List<String> initialWords = Arrays.asList(sentence.split(" "));
+
+		//Converting list into set which removes duplicates
 		Set<String> reducedWords = new HashSet<>(initialWords);
-		System.out.println("LIST SIZE " + initialWords.size());
-		System.out.println("SET SIZE " + reducedWords.size());
-		System.out.println("- Result -");
-		System.out.println(initialWords.size() > reducedWords.size());
+		
+		//Returns no if the list of words is bigger than the set of words
+		return initialWords.size() > reducedWords.size() ? "no" : "yes";
 	}
 }
