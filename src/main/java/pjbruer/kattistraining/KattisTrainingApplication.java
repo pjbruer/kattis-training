@@ -1,15 +1,10 @@
 package pjbruer.kattistraining;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import java.util.*;
 
-@SpringBootApplication
 public class KattisTrainingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(KattisTrainingApplication.class, args);
 
 		Scanner sc = new Scanner(System.in);
 		final String sentence = sc.nextLine().toLowerCase();
